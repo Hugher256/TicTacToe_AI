@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+/* for small screens */
+@media screen and (max-width: 400px) {
+	table {
+		display: block;
+		font-size: 60%;
+		width: 100%;
+	}
+	td {
+		width: 100%;
+	}
+}
+
+/* for normal viewing */
+:root {
+	font-family: 'Roboto';
+}
+
+body {
+	margin-top: 3.5rem;
+}
+
+table {
+	margin: auto;
+	border-collapse: collapse;
+}
+
+td {
+	width: 150px;
+	height: 150px;
+	border: 2px solid black;
+	font-size: 7em;
+	font-weight: 300;
+	text-align: center;
+}
+
+h1 {
+	font-size: 3em;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+h2 {
+	font-size: 2em;
+	text-align: center;
+	margin-bottom: 15px;
+	text-decoration: underline;
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+td:first-child,
+td:nth-child(2),
+td:nth-child(3) {
+	border-top: 0;
+}
+
+td:first-child {
+	border-left: 0;
+}
+
+td:nth-child(3n) {
+	border-right: 0;
+}
+
+.last {
+	border-bottom: 0;
+}
+
+.wrapper {
+	text-align: center;
+}
+
+.names {
+	margin: auto;
+	border-collapse: collapse;
+	margin-top: 10px;
+}
+
+#butt {
+	padding: 10px 26px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.winner {
+	margin-bottom: 10px;
+}
+
+.names td,
+th {
+	border: 2px solid black;
+	padding: 5px;
+	font-size: 1.5em;
+	width: 150px;
+	height: unset;
+}
+
+.names td {
+	color: gray;
+}
