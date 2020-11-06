@@ -6,7 +6,7 @@ const app = express()
 const dataBase = new dataStore('database.db', { autoload: true })
 dataBase.loadDatabase()
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
 	console.log('Listening')
 })
 
@@ -18,10 +18,7 @@ app.post('/name', (request, response) => {
 	console.log(data)
 	dataBase.find({ name: data.name }, (err, docs) => {
 		if (docs.length) {
-			dataBase.update(
-				{ name: data.name },
-				{ name: data.name, matches: data.matches }
-			)
+			dataBase.update({ name: data.name }, { $inc: { matches: 1 } })
 			dataBase.loadDatabase()
 			console.log('Updated!')
 		} else {

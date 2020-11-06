@@ -17,7 +17,7 @@ async function getData() {
 		n = document.querySelector('.names')
 		let it = dataR[i]
 
-		if (it != null && it != '' && it != ' ') {
+		if (it.name != null && it.name != '' && it.name != ' ') {
 			const trow = document.createElement('tr')
 			const item = document.createElement('td')
 			const count = document.createElement('td')
